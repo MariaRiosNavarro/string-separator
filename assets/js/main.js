@@ -22,6 +22,12 @@ function split() {
   let after = afterInput.checked;
   //   console.log(after);
 
+  // Add check if form is empty
+
+  if (text === "" || spliter === "" || (before === false && after === false)) {
+    return (output.innerHTML = "Bitte füllen Sie alle Felder aus!");
+  }
+
   // find spliter
 
   let stringIndex = text.indexOf(spliter);
