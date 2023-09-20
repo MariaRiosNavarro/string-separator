@@ -36,5 +36,18 @@ function split() {
 
   console.log(splitOutput);
 
-  output.innerHTML = splitOutput;
+  // add the beginn of the word to the split
+
+  let restString = before
+    ? text.slice(0, stringIndex)
+    : text.slice(0, stringIndex + 1);
+
+  console.log("restString", restString);
+
+  output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
+
+  //   empty the input at the begin
+
+  text.innerHTML = " ";
+  spliter.innerHTML = " ";
 }
