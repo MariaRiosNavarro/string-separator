@@ -7,23 +7,67 @@
     <title>String Separator</title>
   </head>
   <body>
-    <header><h1>String Separator</h1></header>
+    <header>
+      <h1>String Separator</h1>
+      <nav>
+        <label for="german">
+          <img src="./assets/img/de.svg" alt="german icon" />
+          <input
+            type="radio"
+            name="language"
+            value="german"
+            id="german"
+            onclick="changeLanguage()"
+            data-js="german"
+            checked
+          />
+        </label>
+        <label for="english">
+          <img src="./assets/img/sh.svg" alt="english icon" />
+          <input
+            type="radio"
+            name="language"
+            value="english"
+            id="english"
+            data-js="english"
+            onclick="changeLanguage()"
+          />
+        </label>
+        <label for="spanish">
+          <img src="./assets/img/es.svg" alt="spanish icon" />
+          <input
+            type="radio"
+            name="language"
+            value="spanish"
+            id="spanish"
+            data-js="spanish"
+            onclick="changeLanguage()"
+          />
+        </label>
+      </nav>
+    </header>
     <main>
-      <form onsubmit="split(); return false">
-        <label for="string">Zu trennende Zeichenkette</label>
+      <form onsubmit="split(); return false" data-js="form">
+        <label for="string" data-js="label-string"
+          >Zu trennende Zeichenkette</label
+        >
         <input type="text" name="string" id="string" data-js="string" />
-        <label for="string-spliter">Woran trennen?</label>
+        <label for="string-spliter" data-js="label-spliter"
+          >Woran trennen?</label
+        >
         <input
           type="text"
           name="string-spliter"
           id="string-spliter"
           data-js="string-spliter"
         />
-        <input type="radio" id="davor" data-js="davor" name="radio" />
-        <label for="davor">Davor</label>
-        <input type="radio" id="dannach" data-js="dannach" name="radio" />
-        <label for="dannach">Dannach</label>
-        <input type="submit" value="klick mich" />
+        <div class="radio-wrapper">
+          <input type="radio" id="before" data-js="before" name="radio" />
+          <label for="before" data-js="label-before">Davor</label>
+          <input type="radio" id="after" data-js="after" name="radio" />
+          <label for="after" data-js="label-after">Dannach</label>
+        </div>
+        <input type="submit" value="klick mich" data-js="submit" />
         <div class="output" data-js="output"></div>
       </form>
     </main>
