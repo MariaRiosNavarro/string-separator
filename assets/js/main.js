@@ -25,7 +25,7 @@ function split() {
   // Add check if form is empty
 
   if (text === "" || spliter === "" || (before === false && after === false)) {
-    return (output.innerHTML = "Bitte füllen Sie alle Felder aus!");
+    return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte füllen Sie alle Felder aus!</p>`);
   }
 
   // find spliter
