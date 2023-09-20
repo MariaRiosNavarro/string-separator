@@ -7,6 +7,10 @@ const stringSpliter = document.querySelector('[data-js="string-spliter"]');
 const beforeInput = document.querySelector('[data-js="before"]');
 const afterInput = document.querySelector('[data-js="after"]');
 
+// form
+
+const form = document.querySelector('[data-js="form"]');
+
 // outputs
 const output = document.querySelector('[data-js="output"]');
 
@@ -69,6 +73,22 @@ function split() {
   //   console.log("restString", restString);
 
   output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
+
+  // Call the function to clear the input fields at the focus.
+
+  clearInputsOnFocus();
+}
+
+// Empty the form
+
+function clearInputsOnFocus() {
+  const inputs = [stringInput, stringSpliter];
+
+  inputs.forEach((input) => {
+    input.addEventListener("focus", function () {
+      input.value = ""; // Set the value of the input field to empty when the focus is set on it
+    });
+  });
 }
 
 // !ADD multilenguage
