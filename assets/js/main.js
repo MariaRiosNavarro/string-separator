@@ -15,18 +15,18 @@ const output = document.querySelector('[data-js="output"]');
 function split() {
   // Save Values
   let text = stringInput.value;
-  console.log(text);
+  //   console.log(text);
   let spliter = stringSpliter.value;
-  console.log(spliter);
+  //   console.log(spliter);
   let before = beforeInput.checked;
-  console.log(before);
+  //   console.log(before);
   let after = afterInput.checked;
-  console.log(after);
+  //   console.log(after);
 
   // find spliter
 
   let stringIndex = text.indexOf(spliter);
-  console.log(stringIndex);
+  //   console.log(stringIndex);
 
   //  split the word with slice if before is true (checked)
 
@@ -34,7 +34,7 @@ function split() {
     ? text.slice(stringIndex)
     : text.slice(stringIndex + 1);
 
-  console.log(splitOutput);
+  //   console.log(splitOutput);
 
   // add the beginn of the word to the split
 
@@ -42,7 +42,7 @@ function split() {
     ? text.slice(0, stringIndex)
     : text.slice(0, stringIndex + 1);
 
-  console.log("restString", restString);
+  //   console.log("restString", restString);
 
   output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
 
