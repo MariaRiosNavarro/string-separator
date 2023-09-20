@@ -7,23 +7,40 @@
     <title>String Separator</title>
   </head>
   <body>
-    <header><h1>String Separator</h1></header>
+    <header>
+      <h1>String Separator</h1>
+      <nav>
+        <input
+          type="radio"
+          name="language"
+          value="german"
+          id="german"
+          checked
+        />
+        <input type="radio" name="language" value="english" id="english" />
+        <input type="radio" name="language" value="spanish" id="spanish" />
+      </nav>
+    </header>
     <main>
       <form onsubmit="split(); return false">
-        <label for="string">Zu trennende Zeichenkette</label>
+        <label for="string" data-js="label-string"
+          >Zu trennende Zeichenkette</label
+        >
         <input type="text" name="string" id="string" data-js="string" />
-        <label for="string-spliter">Woran trennen?</label>
+        <label for="string-spliter" data-js="label-spliter"
+          >Woran trennen?</label
+        >
         <input
           type="text"
           name="string-spliter"
           id="string-spliter"
           data-js="string-spliter"
         />
-        <input type="radio" id="davor" data-js="davor" name="radio" />
-        <label for="davor">Davor</label>
-        <input type="radio" id="dannach" data-js="dannach" name="radio" />
-        <label for="dannach">Dannach</label>
-        <input type="submit" value="klick mich" />
+        <input type="radio" id="before" data-js="before" name="radio" />
+        <label for="before" data-js="before">Davor</label>
+        <input type="radio" id="after" data-js="after" name="radio" />
+        <label for="after" data-js="after">Dannach</label>
+        <input type="submit" value="klick mich" data-js="submit" />
         <div class="output" data-js="output"></div>
       </form>
     </main>
