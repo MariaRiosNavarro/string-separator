@@ -45,9 +45,4 @@ function split() {
   //   console.log("restString", restString);
 
   output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
-
-  //   empty the input at the begin
-
-  text.innerHTML = " ";
-  spliter.innerHTML = " ";
 }
