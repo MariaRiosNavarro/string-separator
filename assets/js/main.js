@@ -1,4 +1,4 @@
-// Save variables
+// #Save variables
 
 // inputs
 
@@ -14,7 +14,27 @@ const form = document.querySelector('[data-js="form"]');
 // outputs
 const output = document.querySelector('[data-js="output"]');
 
-// Function
+// !ADD multilenguage
+
+// Save variables language variables
+
+// input language variables
+
+const german = document.querySelector('[data-js="german"]');
+const english = document.querySelector('[data-js="english"]');
+const spanish = document.querySelector('[data-js="spanish"]');
+
+// output language variables
+
+const labelString = document.querySelector('[data-js="label-string"]');
+const labelSpliter = document.querySelector('[data-js="label-spliter"]');
+const labelBefore = document.querySelector('[data-js="label-before"]');
+const labelAfter = document.querySelector('[data-js="label-after"]');
+const submit = document.querySelector('[data-js="submit"]');
+
+// !End language variables
+
+// #MAINFunction
 
 function split() {
   let text = stringInput.value;
@@ -79,7 +99,7 @@ function split() {
   clearInputsOnFocus();
 }
 
-// Empty the form
+// #Empty the inputs if they have the focus inside
 
 function clearInputsOnFocus() {
   const inputs = [stringInput, stringSpliter];
@@ -91,23 +111,7 @@ function clearInputsOnFocus() {
   });
 }
 
-// !ADD multilenguage
-
-// Save variables
-
-// input
-
-const german = document.querySelector('[data-js="german"]');
-const english = document.querySelector('[data-js="english"]');
-const spanish = document.querySelector('[data-js="spanish"]');
-
-// output
-
-const labelString = document.querySelector('[data-js="label-string"]');
-const labelSpliter = document.querySelector('[data-js="label-spliter"]');
-const labelBefore = document.querySelector('[data-js="label-before"]');
-const labelAfter = document.querySelector('[data-js="label-after"]');
-const submit = document.querySelector('[data-js="submit"]');
+// #Language Function
 
 function changeLanguage() {
   let germanTrue = german.checked;
