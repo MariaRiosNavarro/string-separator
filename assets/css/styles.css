@@ -16,7 +16,13 @@ h1 {
   padding: 2rem;
 }
 
-h1,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header,
 main {
   width: 100vw;
   background-color: lightgray;

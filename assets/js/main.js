@@ -54,3 +54,5 @@ function split() {
 
   output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
 }
+
+// !ADD multilenguage
