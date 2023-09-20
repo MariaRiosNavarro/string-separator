@@ -1,6 +1,6 @@
 # string-separator
 
-# [Deployment]()
+# [Deployment](https://mariariosnavarro.github.io/string-separator/)
 
 # <div><img src="./assets/img/readme1.png" alt="readme pic" width="300px"></div>
 
