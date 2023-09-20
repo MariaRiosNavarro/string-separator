@@ -9,7 +9,7 @@
   <body>
     <header><h1>String Separator</h1></header>
     <main>
-      <form onsubmit="split()">
+      <form onsubmit="split(); return false">
         <label for="string">Zu trennende Zeichenkette</label>
         <input type="text" name="string" id="string" data-js="string" />
         <label for="string-spliter">Woran trennen?</label>
@@ -24,7 +24,7 @@
         <input type="radio" id="dannach" data-js="dannach" name="radio" />
         <label for="dannach">Dannach</label>
         <input type="submit" value="klick mich" />
-        <div class="output" data-js="output">test</div>
+        <div class="output" data-js="output">------</div>
       </form>
     </main>
 
