@@ -13,7 +13,6 @@ const output = document.querySelector('[data-js="output"]');
 // Function
 
 function split() {
-  // Save Values
   let text = stringInput.value;
   //   console.log(text);
   let spliter = stringSpliter.value;
@@ -28,11 +27,14 @@ function split() {
   let stringIndex = text.indexOf(spliter);
   //   console.log(stringIndex);
 
-  //  split the word with slice if before is true (checked)
+  // Add the option for all lenghts of spliter
 
+  let spliterLength = spliter.length;
+
+  //  split the word with slice if before is true (checked)
   let splitOutput = before
     ? text.slice(stringIndex)
-    : text.slice(stringIndex + 1);
+    : text.slice(stringIndex + spliterLength);
 
   //   console.log(splitOutput);
 
@@ -40,7 +42,7 @@ function split() {
 
   let restString = before
     ? text.slice(0, stringIndex)
-    : text.slice(0, stringIndex + 1);
+    : text.slice(0, stringIndex + spliterLength);
 
   //   console.log("restString", restString);
 
