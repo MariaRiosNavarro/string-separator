@@ -4,8 +4,8 @@
 
 const stringInput = document.querySelector('[data-js="string"]');
 const stringSpliter = document.querySelector('[data-js="string-spliter"]');
-const beforeInput = document.querySelector('[data-js="davor"]');
-const afterInput = document.querySelector('[data-js="dannach"]');
+const beforeInput = document.querySelector('[data-js="before"]');
+const afterInput = document.querySelector('[data-js="after"]');
 
 // outputs
 const output = document.querySelector('[data-js="output"]');
@@ -92,6 +92,13 @@ function changeLanguage() {
       labelBefore.innerHTML = "antes";
       labelAfter.innerHTML = "despues";
       submit.value = "separar";
+      break;
+    case germanTrue:
+      labelString.innerHTML = "Zu trennende Zeichenkette";
+      labelSpliter.innerHTML = "Woran trennen?";
+      labelBefore.innerHTML = "Davor";
+      labelAfter.innerHTML = "Dannach";
+      submit.value = "klick mich";
       break;
     default:
       germanTrue;

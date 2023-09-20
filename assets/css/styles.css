@@ -10,16 +10,33 @@ html {
   font-size: 62.5%;
 }
 
+header {
+  text-align: center;
+}
+
 h1 {
   font-size: 2rem;
-  text-align: center;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+nav img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+nav input {
+  position: relative;
+  right: 3.4rem;
+  visibility: hidden;
 }
 
 header,
@@ -61,6 +78,10 @@ input[type="submit"] {
   padding: 0.3rem 2rem;
 }
 
+.radio-wrapper {
+  display: flex;
+}
+
 input[type="radio"] {
   margin-left: 1rem;
   border: none;
@@ -74,3 +95,12 @@ input[type="radio"] {
 .output p {
   padding: 0.7rem;
 }
+
+/* @media screen {
+}
+
+@media screen and (min-width: 550px) {
+  input[type="radio"] {
+    display: block;
+  }
+} */
