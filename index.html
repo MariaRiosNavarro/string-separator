@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>String Separator</title>
+  </head>
+  <body>
+    <header><h1>String Separator</h1></header>
+    <main>
+      <form onsubmit="split()">
+        <label for="string">Zu trennende Zeichenkette</label>
+        <input type="text" name="string" id="string" data-js="string" />
+        <label for="string-spliter">Woran trennen?</label>
+        <input
+          type="text"
+          name="string-spliter"
+          id="string-spliter"
+          data-js="string-spliter"
+        />
+        <input type="radio" id="davor" data-js="davor" name="radio" />
+        <label for="davor">Davor</label>
+        <input type="radio" id="dannach" data-js="dannach" name="radio" />
+        <label for="dannach">Dannach</label>
+        <input type="submit" value="klick mich" />
+        <div class="output" data-js="output">test</div>
+      </form>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

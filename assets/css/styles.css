@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1,
+main {
+  width: 100vw;
+  background-color: lightgray;
+}
+
+main {
+  height: 100vh;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+form {
+  margin: 5rem auto;
+  background-color: gray;
+  width: 70vw;
+  padding: 3rem;
+  height: 350px;
+}
+
+label:nth-of-type(1),
+label:nth-of-type(2),
+input[type="submit"] {
+  display: block;
+}
+
+label,
+input {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.3rem 2rem;
+}
+
+input[type="radio"] {
+  margin-left: 1rem;
+  border: none;
+}
+
+.output {
+  display: block;
+  margin-top: 2rem;
+}
