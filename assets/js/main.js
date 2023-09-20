@@ -56,3 +56,45 @@ function split() {
 }
 
 // !ADD multilenguage
+
+// Save variables
+
+// input
+
+const german = document.querySelector('[data-js="german"]');
+const english = document.querySelector('[data-js="english"]');
+const spanish = document.querySelector('[data-js="spanish"]');
+
+// output
+
+const labelString = document.querySelector('[data-js="label-string"]');
+const labelSpliter = document.querySelector('[data-js="label-spliter"]');
+const labelBefore = document.querySelector('[data-js="label-before"]');
+const labelAfter = document.querySelector('[data-js="label-after"]');
+const submit = document.querySelector('[data-js="submit"]');
+
+function changeLanguage() {
+  let germanTrue = german.checked;
+  let englishTrue = english.checked;
+  let spanishTrue = spanish.checked;
+
+  switch (true) {
+    case englishTrue:
+      labelString.innerHTML = "String to be separated";
+      labelSpliter.innerHTML = "Separate from what?";
+      labelBefore.innerHTML = "before";
+      labelAfter.innerHTML = "after";
+      submit.value = "split";
+      break;
+    case spanishTrue:
+      labelString.innerHTML = "Frase a separar";
+      labelSpliter.innerHTML = "¿Separarse de qué?";
+      labelBefore.innerHTML = "antes";
+      labelAfter.innerHTML = "despues";
+      submit.value = "separar";
+      break;
+    default:
+      germanTrue;
+      break;
+  }
+}
