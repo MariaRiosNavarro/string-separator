@@ -15,7 +15,7 @@ const output = document.querySelector('[data-js="output"]');
 function split() {
   let text = stringInput.value;
   //   console.log(text);
-  let spliter = stringSpliter.value;
+  let spliter = stringSpliter.value.toLowerCase(); // Umwandlung in Kleinbuchstaben
   //   console.log(spliter);
   let before = beforeInput.checked;
   //   console.log(before);
@@ -30,7 +30,7 @@ function split() {
 
   // find spliter
 
-  let stringIndex = text.indexOf(spliter);
+  let stringIndex = text.toLowerCase().indexOf(spliter); // Umwandlung dazu des Haupttexts in Kleinbuchstaben
   //   console.log(stringIndex);
 
   // Add the option for all lenghts of spliter
