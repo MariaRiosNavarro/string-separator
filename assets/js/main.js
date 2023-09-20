@@ -22,10 +22,26 @@ function split() {
   let after = afterInput.checked;
   //   console.log(after);
 
-  // Add check if form is empty
+  // Add check if form is empty - Add for other languages:
+  let germanTrue = german.checked;
+  let englishTrue = english.checked;
+  let spanishTrue = spanish.checked;
 
   if (text === "" || spliter === "" || (before === false && after === false)) {
-    return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte füllen Sie alle Felder aus!</p>`);
+    switch (true) {
+      case germanTrue:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte füllen Sie alle Felder aus!</p>`);
+        break;
+      case englishTrue:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Please fill in all fields!</p>`);
+        break;
+      case spanishTrue:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Por favor, rellene todos los campos.</p>`);
+        break;
+      default:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte füllen Sie alle Felder aus!</p>`);
+        break;
+    }
   }
 
   // find spliter
