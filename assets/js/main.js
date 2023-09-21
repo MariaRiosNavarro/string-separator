@@ -7,6 +7,9 @@ const stringSpliter = document.querySelector('[data-js="string-spliter"]');
 const beforeInput = document.querySelector('[data-js="before"]');
 const afterInput = document.querySelector('[data-js="after"]');
 
+// *OTHER OPTION: we can extract the input of before and after together with her name like:
+// *const radioInput = document.querySelector('input[name = "radio"]')
+
 // form
 
 const form = document.querySelector('[data-js="form"]');
@@ -45,6 +48,8 @@ function split() {
   //   console.log(before);
   let after = afterInput.checked;
   //   console.log(after);
+
+  // *OTHER OPTION:(see oben): let radioValueChecked = radioInput:checked.value
 
   // Add check if form is empty - Add for other languages:
   let germanTrue = german.checked;
