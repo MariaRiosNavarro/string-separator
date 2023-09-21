@@ -79,33 +79,33 @@ function split() {
   let textLoweCase = text.toLowerCase(); // Conversion to lower case so that both have the same type (see the case of spliter). The output will have the same type as the one given. The conversion is only for the search
 
   if (textLoweCase.includes(spliterLowCase)) {
-    // find spliter
+    //  Find the index of the spliter
 
     let stringIndex = textLoweCase.indexOf(spliterLowCase);
 
-    // Add the option for all lenghts of spliter
+    // Get the length of the spliter
 
     let spliterLength = spliter.length;
 
-    //  split the word with slice if before is true (checked)
+    //  Split the text at the index of the spliter: with slice if before is true (checked)
     let splitOutput = before
       ? text.slice(stringIndex)
       : text.slice(stringIndex + spliterLength);
 
     //   console.log(splitOutput);
 
-    // add the beginn of the word to the split
+    // add the beginn of the word to the split: Get the rest of the text before the spliter
 
     let restString = before
       ? text.slice(0, stringIndex)
       : text.slice(0, stringIndex + spliterLength);
 
     //   console.log("restString", restString);
+    // Output the split text
 
     output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
-
-    // Call the function to clear the input fields at the focus.
   } else {
+    //  Display an error message if the spliter is not present
     switch (true) {
       case germanTrue:
         return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte geben sie ein Satzt oder Buchstabe die in der Satzt vorkommt</p>`);
@@ -121,7 +121,7 @@ function split() {
         break;
     }
   }
-
+  //Clear the input fields
   clearInputsOnFocus();
 }
 
