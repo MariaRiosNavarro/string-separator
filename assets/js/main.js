@@ -1,3 +1,14 @@
+// Workplan
+
+// 1.-Retrieving DOM elements for input and output fields, as well as language variable elements.
+// 2.-The main function triggered when the form is submitted.
+// 3.-Checking for empty fields and the selection of "before" or "after" modes.
+// 4.-Displaying an error message in the chosen language if the input is invalid.
+// 5.-Verifying whether the separator string exists in the text, otherwise displaying an error message.
+// 6.-Splitting the text based on the selected "before" or "after" mode.
+// 7.-Displaying the split parts in the output element.
+// 8.-A function to clear input fields when they receive focus and another for language selection, dynamically adjusting the user interface based on the chosen language.
+
 // #Save variables
 
 // inputs
