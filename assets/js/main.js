@@ -39,7 +39,7 @@ const submit = document.querySelector('[data-js="submit"]');
 function split() {
   let text = stringInput.value;
   //   console.log(text);
-  let spliter = stringSpliter.value.toLowerCase(); // Umwandlung in Kleinbuchstaben
+  let spliter = stringSpliter.value.toLowerCase(); // Conversion to lower case so that the search for the second string is not case sensitive in case the user makes a mistake.
   //   console.log(spliter);
   let before = beforeInput.checked;
   //   console.log(before);
@@ -70,7 +70,7 @@ function split() {
 
   // find spliter
 
-  let stringIndex = text.toLowerCase().indexOf(spliter); // Umwandlung dazu des Haupttexts in Kleinbuchstaben
+  let stringIndex = text.toLowerCase().indexOf(spliter); // Conversion to lower case so that both have the same type (see the case of spliter). The output will have the same type as the one given. The conversion is only for the search
   //   console.log(stringIndex);
 
   // Add the option for all lenghts of spliter
