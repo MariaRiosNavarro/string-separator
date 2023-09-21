@@ -42,14 +42,15 @@ const submit = document.querySelector('[data-js="submit"]');
 function split() {
   let text = stringInput.value;
   //   console.log(text);
-  let spliter = stringSpliter.value.toLowerCase(); // Conversion to lower case so that the search for the second string is not case sensitive in case the user makes a mistake.
-  //   console.log(spliter);
+  let spliter = stringSpliter.value;
+  let spliterLowCase = spliter.toLowerCase(); // Conversion to lower case so that the search for the second string is not case sensitive in case the user makes a mistake.
   let before = beforeInput.checked;
   //   console.log(before);
   let after = afterInput.checked;
   //   console.log(after);
 
-  // *OTHER OPTION:(see oben): let radioValueChecked = radioInput:checked.value
+  // *OTHER OPTION to radio:(see oben)->
+  // * let radioValueChecked = radioInput:checked.value
 
   // Add check if form is empty - Add for other languages:
   let germanTrue = german.checked;
@@ -73,33 +74,53 @@ function split() {
     }
   }
 
-  // find spliter
+  // * Add the option if the Word is NOT in the text with if :
 
-  let stringIndex = text.toLowerCase().indexOf(spliter); // Conversion to lower case so that both have the same type (see the case of spliter). The output will have the same type as the one given. The conversion is only for the search
-  //   console.log(stringIndex);
+  let textLoweCase = text.toLowerCase(); // Conversion to lower case so that both have the same type (see the case of spliter). The output will have the same type as the one given. The conversion is only for the search
 
-  // Add the option for all lenghts of spliter
+  if (textLoweCase.includes(spliterLowCase)) {
+    // find spliter
 
-  let spliterLength = spliter.length;
+    let stringIndex = textLoweCase.indexOf(spliterLowCase);
 
-  //  split the word with slice if before is true (checked)
-  let splitOutput = before
-    ? text.slice(stringIndex)
-    : text.slice(stringIndex + spliterLength);
+    // Add the option for all lenghts of spliter
 
-  //   console.log(splitOutput);
+    let spliterLength = spliter.length;
 
-  // add the beginn of the word to the split
+    //  split the word with slice if before is true (checked)
+    let splitOutput = before
+      ? text.slice(stringIndex)
+      : text.slice(stringIndex + spliterLength);
 
-  let restString = before
-    ? text.slice(0, stringIndex)
-    : text.slice(0, stringIndex + spliterLength);
+    //   console.log(splitOutput);
 
-  //   console.log("restString", restString);
+    // add the beginn of the word to the split
 
-  output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
+    let restString = before
+      ? text.slice(0, stringIndex)
+      : text.slice(0, stringIndex + spliterLength);
 
-  // Call the function to clear the input fields at the focus.
+    //   console.log("restString", restString);
+
+    output.innerHTML = `<p>${restString}</p><br><p>${splitOutput}</p>`;
+
+    // Call the function to clear the input fields at the focus.
+  } else {
+    switch (true) {
+      case germanTrue:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte geben sie ein Satzt oder Buchstabe die in der Satzt vorkommt</p>`);
+        break;
+      case englishTrue:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Please enter a sentence or letter that occurs in the sentence</p>`);
+        break;
+      case spanishTrue:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Introduzca una frase o una letra que aparezca en la frase</p>`);
+        break;
+      default:
+        return (output.innerHTML = `<p style="background-color: red; text-align: center;" >Bitte geben sie ein Satzt oder Buchstabe die in der Satzt vorkommt</p>`);
+        break;
+    }
+  }
 
   clearInputsOnFocus();
 }
